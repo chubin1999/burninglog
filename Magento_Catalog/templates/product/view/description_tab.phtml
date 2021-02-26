@@ -1,0 +1,51 @@
+<?php
+ 
+$product = $block->getProduct();
+ 
+?>
+<?php echo $product->getData('carewarranty'); ?>
+
+<div class="list-content-detail">
+    <?php
+
+        echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('luna_collection')
+
+                ->toHtml();
+
+    ?>
+    
+</div>
+
+<div class="list-content-detail">
+    <?php
+
+        echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('dining_table')
+
+                ->toHtml();
+
+    ?>
+    
+</div>
+
+<div class="list-content-detail">
+    <?php
+
+        echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('summerset_chair')
+
+                ->toHtml();
+
+    ?>
+    
+</div>
