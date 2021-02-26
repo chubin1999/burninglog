@@ -1,0 +1,70 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Remove header -->
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="my-account-link" remove="true" />
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true" />
+        <referenceBlock name="authorization-link" remove='true' />
+        <!-- End remove header -->
+
+        <!-- Remove footer -->
+        <!-- End remove footer -->
+
+        <!-- Style header -->
+        <referenceContainer name="header.panel">
+            <container name="header.top.desktop.left" htmlTag="div" htmlClass="header-top-desktop-left" before="-">
+             <block class="Magento\Cms\Block\Block" name="block.header.top.desktop.left">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning-header-desktop-left</argument>
+                    </arguments>
+              </block>
+            </container>
+            <container name="header.top.desktop.center" htmlTag="div" htmlClass="header-top-desktop-center" after="header.top.desktop.left">
+             <block class="Magento\Cms\Block\Block" name="block.header.top.desktop.center">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning-header-desktop-center</argument>
+                    </arguments>
+              </block>
+            </container>
+
+            <container name="header.top.mobile.left" htmlTag="div" htmlClass="header-top-mobile-left" after="header.top.desktop.center">
+             <block class="Magento\Cms\Block\Block" name="block.header.top.mobile.left">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning-header-mobile-left</argument>
+                    </arguments>
+              </block>
+            </container>
+            <container name="header.top.mobile.right" htmlTag="div" htmlClass="header-top-mobile-right" after="header.top.mobile.left">
+             <block class="Magento\Cms\Block\Block" name="block.header.top.mobile.right">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning-header-mobile-right</argument>
+                    </arguments>
+              </block>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="top.links">
+             <block class="Magento\Cms\Block\Block" name="block.header.top.desktop.right" before="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning-header-desktop-right</argument>
+                    </arguments>
+              </block>
+        </referenceBlock>
+        <!-- End style header -->
+
+        <!-- Style Footer -->
+        <referenceContainer name="footer">
+              <block name='footer-showroom' class='Magento\Framework\View\Element\Template' before='-' template='Magento_Theme::footer_showroom.phtml' />
+              <block name='footer-banner' class='Magento\Framework\View\Element\Template' after='footer-showroom' template='Magento_Theme::footer_banner.phtml' />
+              <block name='footer-top' class='Magento\Framework\View\Element\Template' after='footer-banner' template='Magento_Theme::footer_top.phtml' />
+        </referenceContainer>
+        <!-- End style footer -->
+
+    </body>
+</page>
