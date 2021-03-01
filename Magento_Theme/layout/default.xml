@@ -6,6 +6,11 @@
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- Move footer  -->
+        <move element='copyright' destination="footer.bottom.container" after='-'/>
+        <move element='form.subscribe' destination="footer-newsletter-container" before='-'/>
+        <!-- End move footer -->
+
         <!-- Remove header -->
         <referenceBlock name="register-link" remove="true" />
         <referenceBlock name="my-account-link" remove="true" />
@@ -15,6 +20,8 @@
         <!-- End remove header -->
 
         <!-- Remove footer -->
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="footer_links" remove="true"/>
         <!-- End remove footer -->
 
         <!-- Style header -->
@@ -63,8 +70,18 @@
               <block name='footer-showroom' class='Magento\Framework\View\Element\Template' before='-' template='Magento_Theme::footer_showroom.phtml' />
               <block name='footer-banner' class='Magento\Framework\View\Element\Template' after='footer-showroom' template='Magento_Theme::footer_banner.phtml' />
               <block name='footer-top' class='Magento\Framework\View\Element\Template' after='footer-banner' template='Magento_Theme::footer_top.phtml' />
+              <container name='footer.middle.container' htmlTag='div' htmlClass='footer-middle-container' label='Footer Middle'>
+                <block name='footer-middle' class='Magento\Framework\View\Element\Template' template='Magento_Theme::footer_middle.phtml' />
+                <container name='footer-newsletter-container' htmlTag='div' htmlClass="footer-newsletter-container" label="Footer Newsletter">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.social-links" template="Magento_Theme::footer_social.phtml" />
+                </container>
+              </container>
+               <container name='footer.bottom.container' htmlTag="div" htmlClass="footer-bottom-container" label="Footer Bottom">
+                <block name='footer-bottom' class='Magento\Framework\View\Element\Template' template="Magento_Theme::footer_bottom.phtml" />
+            </container>
         </referenceContainer>
         <!-- End style footer -->
+
 
     </body>
 </page>

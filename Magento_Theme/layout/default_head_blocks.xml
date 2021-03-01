@@ -5,6 +5,5 @@
     <head>
         <css src="../web/css/line-awesome/line-awesome.min.css" />
         <css src="css/fontawesome.css"/>
-        <css src="css/line-awesome/line-awesome.min.css" />
     </head>
 </page>

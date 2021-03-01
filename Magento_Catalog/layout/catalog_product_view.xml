@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.sku" remove="true" />
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="sidebar.main" remove="true" />
+        <referenceBlock name="view.addto.wishlist" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="product.review.form" remove="true" />
+        <referenceBlock name="reviews.tab" remove= "true"/>
+
+
+        <!-- <referenceBlock name="page.main.title" remove="true" /> -->
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="description-tab" template="product/view/description_tab.phtml" group="detailed_info">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">DESCRIPTION</argument>
+                    <argument name="priority" xsi:type="string">1</argument>
+
+               </arguments>
+           </block>
+            <block class="Magento\Catalog\Block\Product\View" name="care-warranty" template="product/view/warranty_tab.phtml" group="detailed_info">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">CARE &#38; WARRANTY</argument>
+                    <argument name="priority" xsi:type="string">2</argument>
+
+               </arguments>
+           </block>
+           <block class="Magento\Catalog\Block\Product\View" name="shipping-delivery" template="product/view/shipping-delivery_tab.phtml" group="detailed_info">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">SHIPPING &#38; DELIVERY</argument>
+                    <argument name="priority" xsi:type="string">3</argument>
+
+               </arguments>
+           </block>
+           <block class="Magento\Catalog\Block\Product\View" name="installation-tab" template="product/view/installation_tab.phtml" group="detailed_info">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">INSTALLATION REQUIREMENTS</argument>
+                    <argument name="priority" xsi:type="string">4</argument>
+
+               </arguments>
+           </block>
+            
+           
+       </referenceBlock>
+       <referenceContainer name="content">
+        <block class="Magento\Framework\View\Element\Template" before="-" name="test5" template="Magento_Theme::test.phtml" />
+       </referenceContainer>
+        <!-- <referenceContainer name="block.upsell">
+            <container name="block_title_upsell" htmlTag="div" htmlClass="block-title-upsell" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="abc1" template="Magento_Catalog::test.phtml" />
+            </container>  
+        </referenceContainer> -->
+
+
+        <referenceBlock name="head.components">
+            
+        </referenceBlock>
+
+        <move element="page.main.title" destination="product.info.main" before="-" />
+        <!-- <move element="product.info.details" destination="product.info.media" after="-" /> -->
+        <move element="block.upsell" destination="columns.main" after="product.info.media" />
+
+    </body>
+</page>
