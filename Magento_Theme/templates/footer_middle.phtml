@@ -47,7 +47,13 @@
 </div>
 
 <!-- Mobile -->
-<div class="footer-middle-mobile-container">
+<div class="footer-middle-mobile-container" data-mage-init='{
+        "accordion":{
+           "active": false,
+			"openedState": "active",
+			"collapsible": true,
+			"multipleCollapsible": false
+        }}'>
 	<div class="footer-middle-mobile-categories footer-middle-item" data-role='collapsible'>
 		<div class="footer-middle-mobile-title" data-role='trigger' >
 			<?= $block->getLayout()
@@ -93,19 +99,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	require(['jquery', 'accordion'], function($) {
-		$(".footer-middle-mobile-container").accordion({
-			"active": false,
-			"openedState": "active",
-			"collapsible": true,
-			"multipleCollapsible": false
-		});
-	})
-
-</script>
-<script>
-	require([
-		'fontawesome');
-</script>
