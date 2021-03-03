@@ -1,0 +1,144 @@
+<div class="outdoor-inspiration-container">
+    <div class="outdoor-inspiration-title">
+     <?php
+     echo $block->getLayout()
+     ->createBlock('Magento\Cms\Block\Block')
+     ->setBlockId('burning-home-outdoor-title')
+     ->toHtml();
+     ?>
+ </div>
+ <div class="outdoor-inspiration-content">
+    <div class="content">
+        <div class="list-items">
+         <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-1')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-2')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-3')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-4')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-5')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-1')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-2')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-3')
+         ->toHtml();
+         ?> <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-4')
+         ->toHtml();
+         ?>
+          <?php
+         echo $block->getLayout()
+         ->createBlock('Magento\Cms\Block\Block')
+         ->setBlockId('burning-home-outdoor-content-5')
+         ->toHtml();
+         ?>
+     </div>
+ </div>
+</div>
+<div class="outdoor-inspiration-button-view">
+    <?php
+    echo $block->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('burning-home-outdoor-button-view')
+    ->toHtml();
+    ?>
+</div>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+        ], function ($) {
+            jQuery(document).ready(function () {
+                jQuery(".list-items").slick({
+                 slidesToShow: 5,
+                 slidesToScroll: 5,
+                 dots: true,
+                 infinite: true,
+                 speed: 300,
+                 responsive: [
+                 {
+                    breakpoint: 1024,
+                    settings: {
+                        rows: 2,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 380,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false,
+                            infinite: true
+                        }
+                    }
+                    ]
+                });
+            });
+        });
+    </script>
