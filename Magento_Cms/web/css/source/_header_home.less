@@ -1,0 +1,246 @@
+& when (@media-common=true) {
+    .page-header {
+        margin-bottom: 0px; 
+    }
+    .banner-desktop {
+        display: none;
+    }
+    .banner__between_desktop {
+        display: none;
+    }
+    // BANNER 01 TOP MOBILE 
+    .banner-mobile {
+        position: relative;
+        .banner__content {
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            p {
+                font-family: 'market-regular';
+                font-size: 58px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-align: center;
+                word-spacing: -1px;
+                width: 97%;
+            }
+            h3 {
+                margin-top: 39px;
+                margin-bottom: 29px;
+                width: 100%;
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+            }
+            a {
+                .mixin-button-black(220px);
+            }
+        }
+    }
+    // BANENER 02 03 
+    .page-main {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 3px;
+    }
+    .banner_02 {
+        position: relative;
+        .banner_02_content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            h2 {
+                color: #fff;
+                margin-top: -15px;
+                width: 99%;
+                word-spacing: 2px;
+            }
+            p {
+                margin-top: 25px;
+                a {
+                    .mixin-button-black(120px);
+                    padding: 10px 15px;
+                }
+            }
+            
+            // a:after {
+            //     content: '';
+            //     background: url(../images/Plus.png) no-repeat center center;
+            //     display: inline-block;
+            // }
+        }
+    }
+    .banner_03 {
+        position: relative;
+        .banner_03_content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            h2 {
+                color: #fff;
+                margin-top: -15px;
+                width: 99%;
+                word-spacing: 2px;
+            }
+            p {
+                margin-top: 25px;
+                a {
+                    .mixin-button-black(120px);
+                    padding: 10px 15px;
+                }
+            }
+            // a:after {
+            //     content: '';
+            //     background: url(../images/Plus.png) no-repeat center center;
+            //     display: inline-block;
+            // }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .banner-mobile {
+        display: none;
+    }
+    .banner__between_desktop {
+        display: block;
+    }
+    .banner__between_mobile {
+        display: none;
+    }
+    .page-main {
+        margin-top: 23px;
+    }
+    //BANNER 01 TOP DESKTOP
+    .banner-desktop {
+        height: 680px;
+        display: block;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        p {
+            position: absolute;
+            top: 300px;
+            color: #fff;
+            font-family: 'market-regular';
+            font-size: 100px;
+            letter-spacing: -1px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            font-family: "Lora-Regular";
+            font-size: 24px;
+            color: #fff;
+            position: absolute;
+            top: 350px;
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            .mixin-button-black(220px);
+            position: absolute;
+            top: 450px;
+            left: 36%;
+        }    
+    }
+    //BANNER 02 03 
+    .banner__between_desktop {
+        display: flex;
+        .banner_03 {
+            margin-left: 20px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+    // BANNER 01
+    .banner-desktop a {
+        left: 40%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+    //BANNER TOP 01 DESKTOP
+    .banner-desktop {
+        p {
+            position: absolute;
+            top: 262px;
+            color: #fff;
+            font-family: 'market-regular';
+            font-size: 207px;
+            letter-spacing: -1px;
+            width: 97.5%;
+            text-align: center;
+            letter-spacing: -3px;
+            word-spacing: 2px
+        }
+        h2 {
+            font-size: 32px;
+        }
+        a {
+            top: 469px;
+            left: 42%;
+            width: 257px;
+            height: 48px;
+            padding-left: 20px;
+            font-size: 15px;
+            word-spacing: 4px;
+        }
+    }
+    // BANNER 02 03 
+    .banner__between_desktop {
+        .banner_02 {
+            .banner_02_content {
+                top: 49%;
+                width: 99.5%;
+                word-spacing: 1px;
+                letter-spacing: 0px;
+                h2 {
+                    font-size: 43px;
+                    width: 100.5%;
+                    margin-bottom: 31px;
+                    letter-spacing: 0.5px;
+                    word-spacing: -5px;
+                }
+                p {
+                    a {
+                        padding: 13px 26px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            
+            
+        }
+       .banner_03 {
+           .banner_03_content {
+                top: 49%;
+                width: 99.5%;
+                word-spacing: 1px;
+                letter-spacing: 0px;
+                h2 {
+                    font-size: 43px;
+                    width: 100.5%;
+                    margin-bottom: 31px;
+                    letter-spacing: 0.5px;
+                    word-spacing: -5px;
+                }
+                p {
+                    a {
+                        padding: 13px 26px;
+                        font-size: 15px;
+                    }
+                }
+           }
+       }
+    }
+}

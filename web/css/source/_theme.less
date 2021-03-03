@@ -31,3 +31,27 @@
 @color-d1: #d1d1d1;
 @color-ddd: #ddd;
 @size-200: 200px;
+@size-300: 300px;
+
+.mixin-button-black(@width) {
+    padding: 10px 20px;
+    padding-top: 12px;
+    height: 40px;
+    width: @width;
+    margin: 0;
+
+    font-family: @font-roboto-bold;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background: #3b3b3e;
+    background-image: none;
+    border: 2px solid #fff;
+    
+    &:hover {
+        background: #fff;
+        color: black;
+    }
+}

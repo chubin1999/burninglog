@@ -1,0 +1,72 @@
+<div class="row_tiles">
+    <div class="tiles_01">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_01')->toHtml(); ?>
+    </div>
+    <div class="tiles_02">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_02')->toHtml(); ?>
+    </div>
+    <div class="tiles_03">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_03')->toHtml(); ?>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+        ], function ($) {
+            jQuery(document).ready(function () {
+                jQuery(".list-items").slick({
+                 slidesToShow: 5,
+                 slidesToScroll: 5,
+                 dots: true,
+                 infinite: true,
+                 speed: 300,
+                 responsive: [
+                 {
+                    breakpoint: 1024,
+                    settings: {
+                        rows: 2,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            // dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 380,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false,
+                            infinite: true
+                        }
+                    }
+                    ]
+                });
+            });
+        });
+    </script>
