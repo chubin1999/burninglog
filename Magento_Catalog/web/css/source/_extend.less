@@ -1,4 +1,55 @@
 & when (@media-common = true) {
+    .breadcrumbs ul.items {
+        position: relative;
+
+        .item:first-child a{
+            margin-left: 0;
+        }
+
+        .item a{
+            margin: 0 10px;
+            font-size: 12px;   
+        }
+
+        .item.product strong {
+            margin-left: 10px;
+        }
+    }
+
+    .breadcrumbs .item:not(:last-child)::after {
+        .lib-css(content, '/');
+        .lib-css(position, absolute);
+        height: 12px;
+        top: 2px;
+    }
+
+    .product.media {
+        position: relative;
+        
+
+        .attr_preorder {
+            position: absolute;
+            top: 0;
+            background-color: #114a97;
+            z-index: 99;
+            width: 118px;
+            height: 42px;
+
+            span {
+                text-transform: uppercase;
+                .lib-css(font-family, @font-roboto-bold);
+                color: #fff;
+                display: flex;
+                width: 100%;
+                font-size: 15px;
+                letter-spacing: 1px;
+                justify-content: center;
+                line-height: 42px;
+            }
+        }
+    }
+    
+
     .page-title {
         .lib-css(font-size, 22px);
         .lib-css(letter-spacing, -0.6px);
@@ -81,26 +132,26 @@
                 .lib-css(background-color, #fff);
                 .lib-css(border, @size-1px solid #eee);
                 .lib-css(padding-left, 10px);
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                -o-appearance: none;
+                // -webkit-appearance: none;
+                // -moz-appearance: none;
+                // -o-appearance: none;
             }
 
-            select::before {
-                .lib-css(content, ' ');
-                .lib-css(font-family, "Line Awesome Free");
-                .lib-css(position, absolute);
-                .lib-css(right, 20px);
-                border: 1px solid black;
-            }
+            // select::before {
+            //     .lib-css(content, ' ');
+            //     .lib-css(font-family, "Line Awesome Free");
+            //     .lib-css(position, absolute);
+            //     .lib-css(right, 20px);
+            //     border: 1px solid black;
+            // }
         }
 
-        .control::before {
-            .lib-css(content, '\f107');
-            .lib-css(font-family, "Line Awesome Free");
-            .lib-css(position, absolute);
-            .lib-css(right, 20px);
-        }
+        // .control::after {
+        //     .lib-css(content, '\f107');
+        //     .lib-css(font-family, "Font Awesome 5 Free");
+        //     .lib-css(position, absolute);
+        //     .lib-css(right, 20px);
+        // }
     }
 
     .navigation-tab,
@@ -165,15 +216,17 @@
                     .product-item-details {
                         margin-top: -20px;
                         padding: 0 20px 0 20px;
-
+                        
                         .additional_attr {
+
                             p {
                                 text-transform: uppercase;
-                                font-size: 11px;
+                                font-size: 10px;
                                 color: #333;
                                 .lib-css(font-family, @font-roboto-regular);
                             }
                         }
+                        
                     }
                 }
 
@@ -191,6 +244,16 @@
                     .product-item-details {
                         margin-top: -20px;
                         padding: 0 0 0 20px;
+
+                        .additional_attr {
+
+                            p {
+                                text-transform: uppercase;
+                                font-size: 10px;
+                                color: #333;
+                                .lib-css(font-family, @font-roboto-regular);
+                            }
+                        }
                     }
 
                     .product-item-name {
