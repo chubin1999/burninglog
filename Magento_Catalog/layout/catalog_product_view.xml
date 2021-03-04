@@ -17,7 +17,7 @@
         <referenceBlock name="view.addto.compare" remove="true" />
         <referenceBlock name="product.review.form" remove="true" />
         <referenceBlock name="reviews.tab" remove= "true"/>
-
+        
 
         <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <referenceBlock name="product.info.details">
@@ -25,7 +25,6 @@
                <arguments>
                    <argument translate="true" name="title" xsi:type="string">DESCRIPTION</argument>
                     <argument name="priority" xsi:type="string">1</argument>
-
                </arguments>
            </block>
             <block class="Magento\Catalog\Block\Product\View" name="care-warranty" template="product/view/warranty_tab.phtml" group="detailed_info">
@@ -52,15 +51,6 @@
             
            
        </referenceBlock>
-       <referenceContainer name="content">
-        <block class="Magento\Framework\View\Element\Template" before="-" name="test5" template="Magento_Theme::test.phtml" />
-       </referenceContainer>
-        <!-- <referenceContainer name="block.upsell">
-            <container name="block_title_upsell" htmlTag="div" htmlClass="block-title-upsell" before="-">
-                <block class="Magento\Framework\View\Element\Template" name="abc1" template="Magento_Catalog::test.phtml" />
-            </container>  
-        </referenceContainer> -->
-
 
         <referenceBlock name="head.components">
             
