@@ -1,0 +1,19 @@
+<div class="burninglog-testimonial">
+    <div class="burninglog-testimonial-title">
+        <?=
+        $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('burning-home-testimonials-title')->toHtml();
+        ?>
+    </div>
+    <div class="burninglog-testimonial-main">
+        <?php for ($i=1; $i <= 4 ; $i++):?>
+            <div class="col">
+                <div class="testimonial">
+                    <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId("burning-home-testimonials-item-$i")->toHtml(); ?>
+                </div>
+            </div>
+        <?php endfor;?>
+    </div>
+    <div class="burninglog-testimonial-button">
+        <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('burning-home-testimonials-button')->toHtml(); ?>
+    </div>
+</div>

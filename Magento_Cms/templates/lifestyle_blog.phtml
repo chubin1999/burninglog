@@ -1,0 +1,21 @@
+<div class="lifestyle-blog">
+	<div class="lifestyle-title">
+		<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('burning-home-lifestyle-title')->toHtml();?>
+	</div>
+	<div class="lifestyle-main desktop">
+		<?php for ($i=1; $i <=6 ; $i++):?>
+			<div class="col-3 ">
+				<div class="lifestyle-blog">
+					<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId("burning-home-lifestyle-item-$i")->toHtml();?>
+				</div>
+			</div>
+		<?php endfor?>
+	</div>
+	<div class="lifestyle-main mobile">
+		<?php for ($i=1; $i <=2 ; $i++):?>
+			<div class="lifestyle-blog">
+				<?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId("burning-home-lifestyle-item-$i")->toHtml();?>
+			</div>
+		<?php endfor?>
+	</div>
+</div>

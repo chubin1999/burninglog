@@ -9,6 +9,8 @@
     <body>
         <referenceContainer name="main">
             <block class="Magento\Framework\View\Element\Template" name="outdoor.inspiration" template="Magento_Cms::outdoor_inspiration.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="lifestyle.blog" template="Magento_Cms::lifestyle_blog.phtml" after="outdoor.inspiration"/>
+            <block class="Magento\Framework\View\Element\Template" name="burning.log.testimonials" template="Magento_Cms::burning_log_testimonials.phtml" after="lifestyle.blog"/>
         </referenceContainer> 
     </body>
 </page>

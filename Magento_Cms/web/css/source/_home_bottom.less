@@ -1,8 +1,8 @@
 & when (@media-common=true) {
 	// Outdoor inspiration
 	.outdoor-inspiration-container{
-		margin-top: 42px;
-		margin-bottom: 51px;
+		margin-top: 62px;
+		margin-bottom: 60px;
 		text-align: center;
 		//Title
 		.outdoor-inspiration-title{
@@ -12,14 +12,15 @@
 				line-height: 34px;
 				font-size: 32px;
 				font-weight: 400;
-				padding: 0 25px;
-				background: #fff;
 				text-transform: none;
 				position: relative;
-				z-index: 1;
-				width: 52%;
 				margin: 0 auto;
 				top: -5px;
+				strong{
+					background: #fff;
+					font-weight: normal;
+					padding: 0 25px;
+				}
 			}
 			h3:nth-child(2){
 				display: none;
@@ -31,7 +32,7 @@
 				letter-spacing: 0.1px;
 			}
 		}
-		.outdoor-inspiration-title:after{
+		.outdoor-inspiration-title:before{
 			content: '';
 			height: 1px;
 			background: #ddd;
@@ -40,129 +41,91 @@
 			top: 15px;
 			left: 0;
 			width: 100%;
-			z-index: 0;
 		}
 		//Content
 		.outdoor-inspiration-content{
 			margin: 0;
 		}
 	}
-	.slick-slide {
-		margin: 0;
-		margin-top: -50px;
+	.content {
+		margin-top: 13px;
 
-		&.slick-current {
-
-                    //  Slick Row 2
-                    +.slick-active {
-                    	>:first-child {
-                    		img {
-                    			max-width: 95%;
-                    			margin-left: 7px;
-                    			margin-top: 7px;
-                    		}
-
-                    		.product-item-details {
-                    			padding-left: 10px !important;
-                    		}
-                    	}
-
-                    	>:last-child {
-                    		margin-top: -30px;
-
-                    		img {
-                    			margin-left: 7px;
-                    			max-width: 95%;
-                    			margin-top: 8px;
-                    		}
-
-                    		.product-item-details {
-                    			padding-left: 10px;
-                    		}
-                    	}
-                    }
-
-                    //  Slick Row 1
-                    >:first-child {
-                    	img {
-                    		max-width: 96%;
-                    		margin-left: 1px;
-                    	}
-                    }
-
-                    //  Slick Row 1
-                    >:last-child {
-                    	margin-top: -28px;
-
-                    	img {
-                    		max-width: 98%;
-                    		margin-left: 0;
-                    	}
-                    }
-                }
-                .slick-initialized {
-		/*.slick-slide{
-			margin-right: 5px;
-		}
-		.slick-slide.slick-active{
-			margin-right: 7px;
-			}*/
-			.slick-slide.slick-active:last-child{
-				margin-right: 0;
-			}
-		}
-		div .owl-carousel .owl-item img{
-			width: 232px;
-			height: auto;
-			background: #000;
-		}
-		.owl-theme {
-			.owl-dots{
-				display: none;
-			}
-			.owl-nav{
-				button.owl-prev{
-					position: absolute;
-					left: -5px;
-					top: 42%;
-					width: auto;
-					height: auto;
-					border-radius: 50%;
-					span{
-						color: #000;
-						font-size: 23px;
-						border: 1px solid #fff;
-						padding: 6px 17px;
-						background: #fff;
-						border-radius: 50%;
-						font-weight: bold;
+		.list-items {
+			.slick-list {
+				.slick-slide{
+					img{
+						height: auto;
+						width: 100%;
+						padding: 0 5px;
 					}
 				}
-				button.owl-next{
-					position: absolute;
-					right: -5px;
-					top: 42%;
-					width: auto;
-					height: auto;
-					border-radius: 50%;
-					span{
-						color: #000;
-						font-size: 23px;
-						border: 1px solid #fff;
-						padding: 6px 17px;
-						background: #fff;
-						border-radius: 50%;
-						font-weight: bold;
-					}
+				.slick-active {
+					margin-left: 0px;
+				}
+
+				.slick-current {
+					margin-left: 0px;
+				}
+			}
+			.slick-prev,
+			.slick-next {
+				border-radius: 50%;
+				border: 1px solid @color-gray52;
+				width: 42px;
+				height: 42px;
+				z-index: 1;
+				background-color: @color-white;
+
+				&::before {
+					color: @color-black;
+					font-size: 34px;
+					position: relative;
+					top: -2px;
+					left: 0;
+				}
+			}
+
+			.slick-prev {
+				left: 0px;
+				top: 115px;
+
+				&::before {
+					content: "\2039";
+				}
+			}
+
+			.slick-next {
+				right: 0px;
+				top: 115px;
+
+				&::before {
+					content: "\203A";
 				}
 			}
 		}
+		.slick-dots{
+			top: 100%;
+			bottom: 0;
+			li{
+				button:before{
+					font-size: 33px;
+					color: #fdfdfd;
+					text-shadow: 0 0 3px #000;
+					border: none;
+				}
+			}
+			.slick-active{
+				button:before{
+					color: #cccccc;
+				}
+			}
+		}
+	}
 	//Button
 	.outdoor-inspiration-button-view{
-		margin-top: 18px;
+		margin-top: 60px;
 		p{
 			text-align: center;
-			margin-bottom: 51px;
 			a{
 				border: solid 2px #2d2d2f;
 				padding: 8px 19px;
@@ -170,6 +133,213 @@
 				color: #222;
 				text-decoration: none;
 				text-transform: uppercase;
+				display: block;
+			}
+		}
+	}
+	//End outdoor inspiration
+
+	//Stylelife blog
+	.lifestyle-blog{
+		.lifestyle-title{
+			margin-bottom: 27px;
+			position: relative;
+			h3{
+				color: #222;
+				line-height: 34px;
+				font-size: 32px;
+				font-weight: 400;
+				text-transform: none;
+				position: relative;
+				margin: 0 auto;
+				top: -5px;
+				text-align: center;
+				strong{
+					background: #fff;
+					font-weight: normal;
+					padding: 0 25px;
+				}
+			}
+		}
+		.lifestyle-title:before{
+			content: '';
+			height: 1px;
+			background: #ddd;
+			display: inline-block;
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 100%;
+		}
+		.lifestyle-main{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+		}
+		.desktop{
+			.col-3{
+				width: 33.33%;
+				float: left;
+				padding: 0 10px;
+				margin-bottom: 14px;
+				.lifestyle-blog{
+					p:first-child{
+						img{
+							display: block;
+							width: 100%;
+							height: auto;
+						}
+					}
+					h4{
+						font-size: 18px;
+						line-height: 24px;
+						color: #222222;
+						font-weight: 400;
+						font-family: @font-lora-regular;
+						margin: 16px 0 10px 0;
+					}
+					h4+p{
+						letter-spacing: 0.1px;
+					}
+					p:last-child{
+						margin-top: 20px;
+						a{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		.mobile{
+			display: none;
+		}
+	}
+	//End stylelife blog
+
+	//Burninglog testimonial
+	.burninglog-testimonial{
+		margin: 0 -10px;
+		margin-top: 32px;
+		.burninglog-testimonial-title{
+			margin-bottom: 19px;
+			position: relative;
+			h3{
+				color: #222;
+				line-height: 34px;
+				font-size: 32px;
+				font-weight: 400;
+				text-transform: none;
+				position: relative;
+				margin: 0 auto;
+				top: -5px;
+				text-align: center;
+				strong{
+					background: #fff;
+					font-weight: normal;
+					padding: 0 25px;
+				}
+			}
+		}
+		.burninglog-testimonial-title:before{
+			content: '';
+			height: 1px;
+			background: #ddd;
+			display: inline-block;
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 100%;
+		}
+		.burninglog-testimonial-main{
+			overflow: hidden;
+			margin-bottom: 7px;
+			.col{
+				width: 50%;
+				padding: 0 10px;
+				float: left;
+				.testimonial{
+					border: solid 1px #eee;
+					padding: 36px 30px 24px 39px;
+					margin-bottom: 20px;
+					min-height: 167px;
+					p:first-child{
+						font: 400 13px/20px @font-roboto-regular,Sans-serif;
+						color: #333;
+						margin: 0 0 20px;
+						letter-spacing: 0.1px;
+						a{
+							font: 400 13px/20px @font-roboto-regular,Sans-serif;
+							color: #333;
+							text-decoration: underline;
+						}
+					}
+					p:nth-child(2){
+						font: 400 13px/20px @font-roboto-regular,Sans-serif;
+						color: #333;
+						margin-bottom: -2px;
+					}
+					p:last-child{
+						font: 400 13px/14px @font-roboto-regular,Sans-serif;
+						color: #333;
+						strong{
+							font-weight: normal;
+						}
+					}
+				}
+			}
+		}
+		.burninglog-testimonial-button{
+			margin-bottom: 10px;
+			p{
+				text-align: center;
+				a{
+					border: solid 2px #2d2d2f;
+					padding: 8px 15px;
+					font: 700 13px/20px @font-roboto-bold, sans-serif;
+					color: #222;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	//End burninglog testimonial
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+	// Outdoor inspiration
+	.content {
+		margin-top: 13px;
+
+		.list-items {
+			height: 270px;
+			.slick-list {
+				.slick-slide{
+					img{
+						width: auto;
+						padding: 0;
+					}
+				}
+				.slick-active {
+					margin-left: 4px;
+				}
+
+				.slick-current {
+					margin-left: 0px;
+				}
+			}
+		}
+		.slick-dots{
+			li{
+				display: none;
+			}
+		}
+	}
+	//Button
+	.outdoor-inspiration-button-view{
+		margin-top: -10px;
+		p{
+			a{
+				display: inline;
 			}
 		}
 	}
@@ -177,6 +347,9 @@
 }
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 	//Outdoor inspiration
+	div .outdoor-inspiration-container{
+		margin-bottom: 35px;
+	}
 	div .outdoor-inspiration-container {
 		.outdoor-inspiration-title {
 			h3{
@@ -188,30 +361,174 @@
 				color: #2d2d2d;
 				line-height: 24px;
 				padding: 0 19px;
-				width: 53%;
+				top: 0;
+				strong{
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+		//Button
+	div .outdoor-inspiration-button-view{
+		margin-top: 50px;
+	}
+	//End outdoor inspiration
+
+	//Stylelife blog
+	div .lifestyle-blog{
+		.lifestyle-title{
+			h3{
+				top: 0;
+				font-size: 22px;
+				color: #2d2d2d;
+				line-height: 24px;
+				padding: 0 19px
+			}
+		}
+		.lifestyle-main{
+			margin: 0;
+		}
+		.desktop{
+			display: none;
+		}
+		.mobile{
+			display: block;
+			.lifestyle-blog{
+				p:first-child{
+					img{
+						width: 100%;
+					}
+				}
+				h4{
+					font-size: 18px;
+					line-height: 24px;
+					color: #222222;
+					font-weight: 400;
+					font-family: @font-lora-regular;
+					margin: 16px 0 10px 0;
+				}
+				h4+p{
+					letter-spacing: 0.1px;
+				}
+				p:last-child{
+					margin-top: 20px;
+					a{
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+	}
+	//End stylelife blog
+
+	//Burninglog testimonial
+	div .burninglog-testimonial{
+		margin: 0;
+		margin-top: 32px;
+		.burninglog-testimonial-title{
+			h3{
+				top: 0;
+				font-size: 22px;
+				color: #2d2d2d;
+				line-height: 24px;
+				padding: 0 19px;
+				strong{
+					padding: 0 19px;
+				}
+			}
+		}
+		.burninglog-testimonial-main{
+			.col{
+				width: 100%;
+				.testimonial{
+					p:first-child{
+						font: 400 13px/20px @font-roboto-regular,Sans-serif;
+						color: #333;
+						margin: 0 0 20px;
+						letter-spacing: 0.1px;
+						a{
+							font: 400 13px/20px @font-roboto-regular,Sans-serif;
+							color: #333;
+							text-decoration: underline;
+						}
+					}
+					p:nth-child(2){
+						font: 400 13px/20px @font-roboto-regular,Sans-serif;
+						color: #333;
+						margin-bottom: -2px;
+					}
+					p:last-child{
+						font: 400 13px/14px @font-roboto-regular,Sans-serif;
+						color: #333;
+						strong{
+							font-weight: normal;
+						}
+					}
+				}
+			}
+			.col:nth-child(3){
+				display: none;
+			}
+			.col:last-child{
+				display: none;
+			}
+		}
+		.burninglog-testimonial-button{
+			margin-bottom: 10px;
+			p{
+				text-align: center;
+				a{
+					border: solid 2px #2d2d2f;
+					padding: 8px 15px;
+					font: 700 13px/20px @font-roboto-bold, sans-serif;
+					color: #222;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	//End burninglog testimonial
+}
+
+@media only screen and (max-width: 379px) {
+	//Outdoor inspiration
+	div .outdoor-inspiration-container {
+		.outdoor-inspiration-title {
+			h3:nth-child(2){
+				font-size: 18px;
+				strong{
+					padding: 0 5px;
+				}
 			}
 		}
 	}
 	//End outdoor inspiration
-}
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-	div .outdoor-inspiration-container {
-		.outdoor-inspiration-title {
-			h3:nth-child(2){
-				width: 60%;
-			}
-		}
-	}
-}
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-	div .outdoor-inspiration-container {
-		.outdoor-inspiration-title {
-			h3:nth-child(2){
-				width: 52%;
-				padding: 0 5px;
+	//Stylelife blog
+	div .lifestyle-blog{
+		.lifestyle-title{
+			h3{
 				font-size: 18px;
+				strong{
+					padding: 0 5px;
+				}
 			}
 		}
 	}
+	//End stylefile blog
+
+	//Burninglog testimonial
+	div .burninglog-testimonial{
+		.burninglog-testimonial-title{
+			h3{
+				font-size: 18px;
+				strong{
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+	//End burninglog testimonial
 }
