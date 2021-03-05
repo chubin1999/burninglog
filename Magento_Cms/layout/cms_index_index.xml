@@ -8,12 +8,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="banner_top" template="Magento_Cms::banner.phtml" before="main.content"/>
+            <block class="Magento\Framework\View\Element\Template" name="banner_top" template="Magento_Cms::home_header_content/banner.phtml" before="main.content"/>
             <referenceContainer name="content">
-               <block class="Magento\Framework\View\Element\Template" name="banner_between" template="Magento_Cms::banner_between.phtml"/>
-               <block class="Magento\Framework\View\Element\Template" name="tiles" template="Magento_Cms::tiles.phtml"/>
-               <block class="Magento\Framework\View\Element\Template" name="banner_end" template="Magento_Cms::banner_end.phtml"/>
-               <block class="Magento\Framework\View\Element\Template" name="tiles_end" template="Magento_Cms::tiles_end.phtml"/>
+               <block class="Magento\Framework\View\Element\Template" name="banner_between" template="Magento_Cms::home_header_content/banner_between.phtml" before="-"/>
+               <block class="Magento\Framework\View\Element\Template" name="tiles" template="Magento_Cms::home_header_content/tiles.phtml" before="banner_between"/>
+               <block class="Magento\Framework\View\Element\Template" name="banner_end" template="Magento_Cms::home_header_content/banner_end.phtml" before="tiles"/>
+               <block class="Magento\Framework\View\Element\Template" name="tiles_end" template="Magento_Cms::home_header_content/tiles_end.phtml" before="banner_end"/>
             </referenceContainer>
             
         </referenceContainer>
