@@ -49,9 +49,22 @@
     background: #3b3b3e;
     background-image: none;
     border: 2px solid #fff;
-    
-    &:hover {
-        background: #fff;
-        color: black;
-    }
+}
+
+.mixin-button-white(@width) {
+    padding: 11px 17px;
+    padding-top: 11px;
+    height: 40px;
+    width: @width;
+    margin: 0;
+
+    font-family: @font-roboto-bold;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #3b3b3e;
+
+    background: #f1f1f1;
+    background-image: none;
+    border: 2px solid #3b3b3e;
 }

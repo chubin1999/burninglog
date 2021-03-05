@@ -5,5 +5,7 @@
     <head>
         <css src="../web/css/line-awesome/line-awesome.min.css" />
         <css src="css/fontawesome.css"/>
+        <css src="css/owl.theme.default.css" />
+        <css src="css/owl.carousel.min.css" />
     </head>
 </page>
