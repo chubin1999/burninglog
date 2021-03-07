@@ -5,9 +5,6 @@ var config = {
 		slick: 'js/slick'
 	},   
 	shim: {
-		'fontawesome': {
-			deps: ['jquery']
-		},
 		'owlcarousel': {
 			deps: ['jquery']
 		},
