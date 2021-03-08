@@ -1,14 +1,35 @@
 & when (@media-common = true) {
+    .nav-sections {
+        position: relative;
+    }
+
+    .nav-sections::before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        bottom: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
     .breadcrumbs ul.items {
         position: relative;
+        margin-top: 5px;
 
-        .item:first-child a{
+        .item:first-child a {
             margin-left: 0;
+            margin-right: 6px;
         }
 
-        .item a{
+        .item a {
             margin: 0 10px;
-            font-size: 12px;   
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+
+        .item strong {
+            margin: 0 10px;
+            font-size: 12px;
+            text-transform: capitalize;
         }
 
         .item.product strong {
@@ -21,6 +42,10 @@
         .lib-css(position, absolute);
         height: 12px;
         top: 2px;
+    }
+
+    .column.main {
+        margin-top: -5px;
     }
 
     .product.media {
@@ -81,6 +106,17 @@
         .product-options-wrapper{
 
             .fieldset {
+                display: flex;
+                flex-wrap: wrap;
+
+                .field:first-child {
+                    order: 1;
+                }
+
+                .field:last-child {
+                    order: 0;
+                }
+
 
                 .field {
                     .lib-css(margin, 0 0 16px);

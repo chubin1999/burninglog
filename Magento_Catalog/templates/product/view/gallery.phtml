@@ -27,17 +27,16 @@ $mainImageData = $mainImage ?
     $helper->getDefaultPlaceholderUrl('image');
 
 ?>
-
-<div class="attr_preorder">
+<?php
+    $product = $block->getProduct();
+    $p = $product->getData('pre_order');
+if($p) { ?>
+    <div class="attr_preorder">
     <span>
-        <?php
-        
-        $product = $block->getProduct();
-        
-        ?>
-        <?php echo $product->getData('pre_order'); ?>
+        <?php echo $p ?>
     </span>
 </div>
+<?php } ?>
 
 <div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
     <img
