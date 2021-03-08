@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="content" />
+        <move element="title.content.details" destination="content" after="page.main.title" />
+        <move element="product_list_toolbar" destination="catalog.leftnav" after="-" />
+
+
+        <referenceContainer name="columns.top">
+            <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
+                <block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml" />
+                <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml" />
+                <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml" />
+            </container>
+        </referenceContainer>
+        <referenceContainer name="main.content">
+            <container name="image.bgr" htmlTag="div" htmlClass="img-bgr-category" before="-">
+                <block class="Magento\Cms\Block\Block" name="content.img.bgr">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">burning_log_content_img</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="title.content.details" htmlTag="div" htmlClass="title-details-content">
+                <block class="Magento\Framework\View\Element\Template" name="lancuoi.a" template="Magento_Catalog::lancuoi.phtml" />
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>

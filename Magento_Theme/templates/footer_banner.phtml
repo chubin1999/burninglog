@@ -1,0 +1,30 @@
+<div class="footer-banner-container">
+	<div class="footer-banner-desktop">
+		<div class="footer-banner-desktop_img">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('burning-footer-banner-bg-desktop')
+			->toHtml() ?>
+		</div>
+		<div class="footer-banner-desktop_banner">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('burning-footer-banner-content-desktop')
+			->toHtml() ?>
+		</div>
+	</div>
+	<div class="footer-banner-mobile ">
+		<div class="footer-banner-mobile_img">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('burning-footer-banner-bg-mobile')
+			->toHtml() ?>
+		</div>
+		<div class="footer-banner-mobile_banner">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('burning-footer-banner-content-mobile')
+			->toHtml() ?>
+		</div>
+	</div>
+</div>

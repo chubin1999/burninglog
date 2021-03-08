@@ -1,0 +1,29 @@
+<?php
+
+echo $block->getLayout()
+
+    ->createBlock('Magento\Cms\Block\Block')
+
+    ->setBlockId('detail_content_lis')
+
+    ->toHtml();
+
+?>
+
+<script language="javascript">
+    document.getElementById("icon-menu").onclick = function() {
+        jQuery("#background-menu-repo").hide();
+        console.log("abc");
+    };
+
+    // document.getElementById("btn2").onclick = function () {
+    //     document.getElementById("content").style.display = 'block';
+    // };
+
+    // $(document).ready(function() {
+    //     $("#icon-menu").click(function() {
+    //        $("#background-menu-repot").style.display='none';
+    //        console.log("abc");
+    //     });
+    // });
+</script>
