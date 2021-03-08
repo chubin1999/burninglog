@@ -10,6 +10,6 @@ var config = {
 		},
 		slick: {
             deps: ['jquery']
-        }
+        },
 	},
 };
