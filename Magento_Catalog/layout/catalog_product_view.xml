@@ -18,6 +18,7 @@
         <referenceBlock name="product.review.form" remove="true" />
         <referenceBlock name="reviews.tab" remove= "true"/>
         
+        
 
         <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <referenceBlock name="product.info.details">
