@@ -1,4 +1,20 @@
 & when (@media-common = true) {
+  div .breadcrumbs ul.items{
+    margin-top: 14px;
+    margin-bottom: -30px;
+  }
+  div .breadcrumbs ul.items:before{
+    content: '';
+    height: 1px;
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    max-width: 100%;
+  }
   .page-title {
     .lib-css(font-size, 22px);
     .lib-css(letter-spacing, -0.6px);
@@ -146,6 +162,7 @@
     background-image: url("@{baseDir}images/Rectangle.png");
     height: 320px;
     position: relative;
+    margin-bottom: 3px;
   }
   .content-title {
     position: absolute;
@@ -246,7 +263,7 @@
     display: none;
   }
   .list {
-    text-align: center;
+    /*text-align: center;*/
   }
   div .toolbar-amount {
     padding-top: 10px;
