@@ -80,6 +80,7 @@
             <image id="product_page_image_small" type="thumbnail">
                 <width>130</width>
                 <height>95</height>
+                <transparency>false</transparency>
             </image>
             <!-- Click image list -->
             <image id="product_swatch_image_large" type="image"/>
