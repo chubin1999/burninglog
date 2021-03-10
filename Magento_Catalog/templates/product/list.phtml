@@ -82,7 +82,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                             <div class="additional_attr">
                                 <?php
                                 echo"<div class='brach'>";
-                                $brand_attribute = $_product->getResource()->getAttribute('brand');
+                                $brand_attribute = $_product->getResource()->getAttribute('burning_branch');
                                 if ($brand_attribute) {
                                     $brand_attribute = $brand_attribute->getFrontend()->getValue($_product);
                                     if (empty($brand_attribute)) {
