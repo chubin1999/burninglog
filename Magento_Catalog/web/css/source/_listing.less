@@ -465,7 +465,7 @@
   .products-grid .product-item::before {
     content: " ";
     position: absolute;
-    width: 94%;
+    right: 6%;
     height: 70%;
     border-right: 1px solid #ddd;
     z-index: 11;
@@ -478,14 +478,11 @@
     color: #222222;
   }
   .filter-options .filter-options-content .item {
-      padding: 10px;
+    padding: 10px;
   }
+
 }
 
-.fotorama__nav {
-  position: absolute;
-  bottom: 11%;
-}
 
 .media-width(@extremum, @break)
   when
@@ -646,9 +643,6 @@
         color: #222;
         letter-spacing: -0.25px;
         .lib-css(font-family, @font-lora-regular);
-      }
-
-      p::before {
       }
     }
 
