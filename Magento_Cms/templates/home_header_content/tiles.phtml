@@ -1,0 +1,35 @@
+<div class="row_tiles owl-carousel owl-theme">
+    <div class="item" id="tiles_01">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_01')->toHtml(); ?>
+    </div>
+    <div class="item" id="tiles_02">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_02')->toHtml(); ?>
+    </div>
+    <div class="item" id="tiles_03">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('tiles_03')->toHtml(); ?>
+    </div>
+</div> 
+<script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function($){
+        $(document).ready(function() {
+            $('.row_tiles').owlCarousel({
+                loop:true,
+                nav:false,
+                dots:false,
+                items : 1, // THIS IS IMPORTANT
+                responsive : {
+                    480 : { items : 1  }, // from zero to 480 screen width 4 items
+                    768 : { items : 2  }, // from 480 screen widthto 768 6 items
+                    1024 : { items : 3, loop:false,   // from 768 screen width to 1024 8 items
+                    }
+                },
+
+                autoplay:false,
+                autoplayTimeout:3000
+            })
+        });
+    });
+</script>

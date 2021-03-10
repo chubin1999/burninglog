@@ -1,0 +1,9 @@
+<div class="banner-mobile mobile">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_home_mobile_image')->toHtml(); ?>
+    <div class="banner__content">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_home_mobile_content')->toHtml(); ?>
+    </div>
+</div>
+<div class="banner-desktop desktop">
+  <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_home_desktop')->toHtml(); ?>
+</div>

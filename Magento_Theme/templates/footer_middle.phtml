@@ -1,0 +1,101 @@
+<!-- Desktop -->
+<div class="footer-middle-desktop-container">
+	<div class="footer-middle-desktop-categories footer-middle-item">
+		<div class="footer-middle-desktop-title">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-categories-title")
+			->toHtml() ?>
+		</div>
+		<div class="footer-middle-desktop-content">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-categories-content")
+			->toHtml() ?>
+		</div>
+	</div>
+	<div class="footer-middle-desktop-whyburninglog footer-middle-item">
+		<div class="footer-middle-desktop-title">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-whyburninglog-title")
+			->toHtml() ?>
+		</div>
+		
+		<div class="footer-middle-desktop-content">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-whyburninglog-content")
+			->toHtml() ?>
+		</div>
+	</div>
+	<div class="footer-middle-desktop-ourpolicies footer-middle-item">
+		<div class="footer-middle-desktop-title">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-ourpolicies-title")
+			->toHtml() ?>
+		</div>
+		
+		<div class="footer-middle-desktop-content">
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-ourpolicies-content")
+			->toHtml() ?>
+		</div>
+	</div>
+</div>
+
+<!-- Mobile -->
+<div class="footer-middle-mobile-container" data-mage-init='{
+        "accordion":{
+            "active": false,
+			"openedState": "active",
+			"collapsible": true,
+			"multipleCollapsible": false
+        }}'>
+	<div class="footer-middle-mobile-categories footer-middle-item" data-role='collapsible'>
+		<div class="footer-middle-mobile-title" data-role='trigger' >
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-categories-title")
+			->toHtml() ?>
+		</div>
+		<div class="footer-middle-mobile-content" data-role='content'>
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-categories-content")
+			->toHtml() ?>
+		</div>
+	</div>
+	<div class="footer-middle-mobile-whyburninglog footer-middle-item" data-role='collapsible'>
+		<div class="footer-middle-mobile-title" data-role='trigger'>
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-whyburninglog-title")
+			->toHtml() ?>
+		</div>
+		
+		<div class="footer-middle-mobile-content" data-role='content'>
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-whyburninglog-content")
+			->toHtml() ?>
+		</div>
+	</div>
+	<div class="footer-middle-mobile-ourpolicies footer-middle-item" data-role='collapsible'>
+		<div class="footer-middle-mobile-title" data-role='trigger'>
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-ourpolicies-title")
+			->toHtml() ?>
+		</div>
+		
+		<div class="footer-middle-mobile-content" data-role='content'>
+			<?= $block->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId("burning-footer-middle-ourpolicies-content")
+			->toHtml() ?>
+		</div>
+	</div>
+</div>
