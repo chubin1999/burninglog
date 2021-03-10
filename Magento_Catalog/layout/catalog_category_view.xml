@@ -28,7 +28,7 @@
                 </block>
             </container>
             <container name="title.content.details" htmlTag="div" htmlClass="title-details-content">
-                <block class="Magento\Framework\View\Element\Template" name="lancuoi.a" template="Magento_Catalog::lancuoi.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="lancuoi.a" template="Magento_Catalog::content_detail.phtml" />
             </container>
         </referenceContainer>
     </body>
