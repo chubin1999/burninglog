@@ -19,7 +19,7 @@
     background-image: url("@{baseDir}images/Rectangle.png");
     height: 320px;
     position: relative;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   .content-title {
     position: absolute;
@@ -287,7 +287,7 @@
     padding-right: 8px;
   }
   .pages {
-    margin-top: -2px;
+    margin-top: 0;
     .action {
       border: none;
     }
@@ -357,9 +357,11 @@
     padding: 10px;
   }
   .page-title-wrapper{
-    margin-top: -9px;
+    margin-top: 0px;
   }
-
+.filter-options-item:first-child{
+  display: none;
+}
 }
 
 
@@ -368,11 +370,14 @@ when
 (@extremum ="min")
 and
 (@break = @screen__m) {
+  div .page-main{
+    margin-top: 23px;
+  }
   .modes {
     display: none;
   }
-  .columns .column.main {
-    padding-bottom: 24px;
+  div .columns .column.main {
+    padding-bottom: 28px;
   }
   .products.wrapper ~ .toolbar .pages {
     float: none;
@@ -505,4 +510,13 @@ and
   .product-item-name {
     height: 40px;
   }
+}
+.media-width(@extremum, @break)
+when
+(@extremum ="min")
+and
+(@break = @screen__s) {
+.products-grid .product-item{
+  margin-bottom: 28px;
+}
 }
