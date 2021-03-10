@@ -20,13 +20,13 @@
                 <width>110</width>
                 <height>160</height>
             </image>
-            <image id="category_page_grid" type="small_image">
-                <width>400</width>
-                <height>400</height>
+           <image id="category_page_grid" type="small_image">
+                <width>280</width>
+                <height>208</height>
             </image>
             <image id="category_page_list" type="small_image">
-                <width>400</width>
-                <height>400</height>
+                <width>300</width>
+                <height>300</height>
             </image>
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
