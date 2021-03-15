@@ -18,7 +18,6 @@
         <referenceBlock name="product.review.form" remove="true" />
         <referenceBlock name="reviews.tab" remove= "true"/>
         
-        <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <referenceBlock name="product.info.details">
             <block class="Magento\Catalog\Block\Product\View" name="description-tab" template="product/view/description_tab.phtml" group="detailed_info">
                <arguments>
@@ -50,10 +49,6 @@
             
            
        </referenceBlock>
-
-        <referenceBlock name="head.components">
-            
-        </referenceBlock>
 
         <move element="page.main.title" destination="product.info.main" before="-" />
         <move element="block.upsell" destination="columns.main" after="product.info.media" />
