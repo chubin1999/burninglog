@@ -66,13 +66,18 @@
     }
     
 
-    .page-title {
+   .product .page-title {
         .lib-css(font-size, 22px);
         .lib-css(letter-spacing, -0.6px);
         .lib-css(line-height, 26px);
         .lib-css(color, #222222);
         .lib-css(font-weight, 400);
         .lib-css(font-family, @font-lora-regular);
+        span{
+            font: 400 22px/26px @font-lora-regular,Sans-serif;
+            color: #222;
+            display: block;
+        }
     }
 
     .product-info-price {
@@ -134,7 +139,7 @@
                         .lib-css(max-width, 100%); 
                         position: absolute;
                         left: 0;
-    
+
                         span {
                             font-size: 13px;
                             .lib-css(color, #fff);
@@ -240,7 +245,7 @@
         .block.widget {
 
             .products-grid   {
-                
+
                 .product-item:first-child {
                     margin-right: 20px;
 
@@ -309,8 +314,8 @@
                     }
                     
                     .price-box {
-                            margin-top: 12px;
-                            display: flex;
+                        margin-top: 12px;
+                        display: flex;
 
                         .price {
                             color: #666;
@@ -516,7 +521,7 @@
                     }
                     
                     .price-box {
-                            margin-top: 12px;
+                        margin-top: 12px;
 
                         .price {
                             color: #666;
@@ -587,7 +592,7 @@
         }
 
         .data.item.title:hover {
-            
+
             .switch {
                 background-color: @color-f8;
             }
@@ -788,7 +793,7 @@
             margin-right: 20px;
 
             .product-item-details {
-            
+
                 div.additional_attr {
 
                     img {
